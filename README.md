@@ -1,155 +1,34 @@
-# 🎨 Art Gallery Website Frontend
+# Lumière Art Gallery 🎨
 
-<div align="center">
+A modern, immersive, and highly interactive art gallery website showcasing curated collections of paintings, sculptures, photography, and digital art. 
 
-✨ A modern and responsive Art Gallery Website Frontend built with beautiful UI design and smooth user experience. ✨
+The website features a sophisticated design tailored for premium art galleries, complete with smooth animations, custom cursors, gallery filtering, and fully AI-generated bespoke artwork displays.
 
-</div>
+## ✨ Features
 
----
+- **Stunning UI/UX**: Designed with a premium, minimalist aesthetic to let the artwork shine.
+- **Custom Animations**: Includes a beautiful preloader, smooth scrolling effects, and interactive element reveals on scroll.
+- **Dynamic Gallery Filtering**: Easily filter artworks by category (Paintings, Sculptures, Photography, Digital Art) without page reloads.
+- **AI-Generated Artworks**: Features unique, AI-generated placeholder artworks designed exclusively for this showcase.
+- **Responsive Design**: Fully optimized for desktops, tablets, and mobile devices.
+- **VR Experience Section**: A modern section teasing a virtual reality gallery tour.
+- **Interactive Custom Cursor**: Enhances user engagement with a custom ring and dot cursor.
 
-## 📖 About The Project
+## 🛠️ Technologies Used
 
-The **Art Gallery Website Frontend** is a visually appealing web application designed for showcasing artworks, artists, and exhibitions in a digital environment.
+- **HTML5**: Semantic and accessible structure.
+- **CSS3**: Vanilla CSS for styling, Flexbox/Grid for layouts, and custom keyframe animations.
+- **JavaScript (ES6+)**: For preloader handling, custom cursor logic, scroll reveal animations, and gallery filtering.
+- **Font Awesome**: For high-quality, scalable vector icons.
 
-This project focuses on creating an elegant and user-friendly interface where visitors can easily explore different collections of art through responsive layouts and interactive sections.
+## 🚀 Getting Started
 
----
+Since this is a static frontend website, no complex installation or server setup is required.
 
-# 🌟 Features
+### Prerequisites
+- A modern web browser (Chrome, Firefox, Safari, Edge).
 
-- 🎨 Modern & Elegant UI
-- 📱 Fully Responsive Design
-- 🖼️ Artwork Showcase Gallery
-- 👨‍🎨 Artist Profiles
-- 🏛️ Exhibition Sections
-- 🔍 Search & Filter Functionality
-- ⚡ Smooth Animations
-- 🚀 Fast Performance
-- 🌙 Clean User Experience
-
----
-
-# 🛠️ Technologies Used
-
-| Technology | Purpose |
-|------------|----------|
-| HTML5 | Structure |
-| CSS3 | Styling |
-| JavaScript | Functionality |
-| React.js | Frontend Framework |
-| Tailwind CSS / Bootstrap | UI Design |
-
----
-
-# 📂 Project Structure
-
-```bash
-Art-Gallery-Frontend/
-│
-├── public/
-│
-├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── pages/
-│   ├── styles/
-│   └── App.js
-│
-├── package.json
-└── README.md
-```
-
----
-
-# 🚀 Getting Started
-
-## 📥 Clone Repository
-
-```bash
-git clone https://github.com/your-username/art-gallery-frontend.git
-```
-
----
-
-## 📁 Navigate to Project Folder
-
-```bash
-cd art-gallery-frontend
-```
-
----
-
-## 📦 Install Dependencies
-
-```bash
-npm install
-```
-
----
-
-## ▶️ Run Development Server
-
-```bash
-npm start
-```
-
----
-
-# 🌐 Local Server
-
-```bash
-http://localhost:3000
-```
-
----
-
-# 🎯 Project Goals
-
-- Build a modern frontend UI
-- Practice responsive web design
-- Improve React.js development skills
-- Create reusable components
-- Enhance user interaction experience
-
----
-
-# 🔮 Future Enhancements
-
-- 🔐 User Authentication
-- ☁️ Backend Integration
-- 🛒 Online Art Purchase System
-- 📤 Artwork Upload Feature
-- 🌙 Dark Mode
-- 📊 Admin Dashboard
-
----
-
-# 🤝 Contributing
-
-Contributions are always welcome!
-
-1. Fork the repository  
-2. Create a new branch  
-3. Commit your changes  
-4. Push to the branch  
-5. Open a Pull Request  
-
----
-
-# 📜 License
-
-This project is made for educational and learning purposes.
-
----
-
-<div align="center">
-
-## 👨‍💻 Developed By
-
-### Rayyan Khalid
-
-⭐ Don't forget to star this repository if you like the project!
-
-</div>
-
+### Installation & Usage
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/YourUsername/lumiere-art-gallery.git
