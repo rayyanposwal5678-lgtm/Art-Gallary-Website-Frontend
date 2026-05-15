@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lumière Art Gallery — Where Art Meets Eternity. Explore curated collections of paintings, sculptures, and contemporary art from world-renowned artists.">
+  <title>LUMIÈRE — Art Gallery</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-text">LUMIÈRE</div>
+    <div class="preloader-bar"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <a href="#" class="nav-logo">LUMIÈRE</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#artists">Artists</a></li>
+      <li><a href="#exhibitions">Exhibitions</a></li>
+      <li><a href="#vr-gallery">VR Experience</a></li>
+      <li><a href="#advisory">Advisory</a></li>
+      <li><a href="#journal">Journal</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-label">Established 1897</p>
+      <h1 class="hero-title">LUMIÈRE</h1>
+      <p class="hero-subtitle">Where Art Meets Eternity</p>
+      <a href="#gallery" class="hero-cta">Explore Collection</a>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="marquee-section">
+    <div class="marquee-track">
+      <span class="marquee-item">Renaissance<span class="dot">◆</span></span>
+      <span class="marquee-item">Impressionism<span class="dot">◆</span></span>
+      <span class="marquee-item">Contemporary<span class="dot">◆</span></span>
+      <span class="marquee-item">Abstract<span class="dot">◆</span></span>
+      <span class="marquee-item">Surrealism<span class="dot">◆</span></span>
+      <span class="marquee-item">Baroque<span class="dot">◆</span></span>
+      <span class="marquee-item">Modernism<span class="dot">◆</span></span>
+      <span class="marquee-item">Renaissance<span class="dot">◆</span></span>
+      <span class="marquee-item">Impressionism<span class="dot">◆</span></span>
+      <span class="marquee-item">Contemporary<span class="dot">◆</span></span>
+      <span class="marquee-item">Abstract<span class="dot">◆</span></span>
+      <span class="marquee-item">Surrealism<span class="dot">◆</span></span>
+      <span class="marquee-item">Baroque<span class="dot">◆</span></span>
+      <span class="marquee-item">Modernism<span class="dot">◆</span></span>
+    </div>
+  </div>
+
+  <!-- Gallery Section -->
+  <section class="section" id="gallery">
+    <div class="reveal">
+      <p class="section-label">Curated Collection</p>
+      <h2 class="section-title">Masterworks</h2>
+      <p class="section-desc">Explore our carefully curated selection of extraordinary artworks spanning centuries of human creativity and expression.</p>
+    </div>
+    <div class="gallery-filters reveal">
+      <button class="filter-btn active" data-filter="all">All Works</button>
+      <button class="filter-btn" data-filter="painting">Paintings</button>
+      <button class="filter-btn" data-filter="sculpture">Sculptures</button>
+      <button class="filter-btn" data-filter="photography">Photography</button>
+      <button class="filter-btn" data-filter="digital">Digital Art</button>
+    </div>
+    <div class="gallery-grid reveal" id="galleryGrid">
+      <div class="art-card" data-category="painting" data-title="Crimson Reverie" data-artist="Elena Vasquez" data-meta="Oil on Canvas • 2023">
+        <img src="images/hero.png" alt="Crimson Reverie" class="art-card-img" loading="lazy">
+        <div class="art-card-info">
+          <h3 class="art-card-title">Crimson Reverie</h3>
+          <p class="art-card-artist">Elena Vasquez</p>
+          <p class="art-card-meta">Oil on Canvas • 2023</p>
+        </div>
+      </div>
+      <div class="art-card" data-category="painting" data-title="Celestial Convergence" data-artist="Mikhail Petrov" data-meta="Acrylic on Canvas • 2024">
+        <img src="images/abstract.png" alt="Celestial Convergence" class="art-card-img" loading="lazy">
+        <div class="art-card-info">
+          <h3 class="art-card-title">Celestial Convergence</h3>
+          <p class="art-card-artist">Mikhail Petrov</p>
+          <p class="art-card-meta">Acrylic on Canvas • 2024</p>
+        </div>
+      </div>
+      <div class="art-card" data-category="painting" data-title="Eternal Mist" data-artist="Aiko Tanaka" data-meta="Oil on Linen • 2022">
+        <img src="images/landscape.png" alt="Eternal Mist" class="art-card-img" loading="lazy">
+        <div class="art-card-info">
+          <h3 class="art-card-title">Eternal Mist</h3>
+          <p class="art-card-artist">Aiko Tanaka</p>
+          <p class="art-card-meta">Oil on Linen • 2022</p>
+        </div>
+      </div>
+      <div class="art-card" data-category="painting" data-title="The Watcher" data-artist="Luca Moretti" data-meta="Oil on Panel • 2021">
+        <img src="images/portrait.png" alt="The Watcher" class="art-card-img" loading="lazy">
+        <div class="art-card-info">
+          <h3 class="art-card-title">The Watcher</h3>
+          <p class="art-card-artist">Luca Moretti</p>
+          <p class="art-card-meta">Oil on Panel • 2021</p>
+        </div>
+      </div>
+      <div class="art-card" data-category="sculpture" data-title="Frozen Grace" data-artist="Sophie Laurent" data-meta="Carrara Marble • 2023">
+        <img src="images/sculpture.png" alt="Frozen Grace" class="art-card-img" loading="lazy">
+        <div class="art-card-info">
+          <h3 class="art-card-title">Frozen Grace</h3>
+          <p class="art-card-artist">Sophie Laurent</p>
+          <p class="art-card-meta">Carrara Marble • 2023</p>
+        </div>
+      </div>
+      <div class="art-card" data-category="photography" data-title="Golden Hour" data-artist="Elena Vasquez" data-meta="Fine Art Print • 2024">
+        <img src="images/landscape.png" alt="Golden Hour" class="art-card-img" loading="lazy">
+        <div class="art-card-info">
+          <h3 class="art-card-title">Golden Hour</h3>
+          <p class="art-card-artist">Elena Vasquez</p>
+          <p class="art-card-meta">Fine Art Print • 2024</p>
+        </div>
+      </div>
+      <!-- 10 New Artworks -->
+      <div class="art-card" data-category="painting" data-title="Symphony in Blue" data-artist="Julian Rossi" data-meta="Oil on Canvas • 2021">
+        <img src="images/symphony_blue.png" alt="Symphony in Blue" class="art-card-img" loading="lazy">
+        <div class="art-card-info">
+          <h3 class="art-card-title">Symphony in Blue</h3>
+          <p class="art-card-artist">Julian Rossi</p>
+          <p class="art-card-meta">Oil on Canvas • 2021</p>
+        </div>
+      </div>
+      <div class="art-card" data-category="painting" data-title="The Renaissance Echo" data-artist="Clara Dubois" data-meta="Oil on Panel • 2019">
+        <img src="images/renaissance_echo.png" alt="The Renaissance Echo" class="art-card-img" loading="lazy">
+        <div class="art-card-info">
+          <h3 class="art-card-title">The Renaissance Echo</h3>
+          <p class="art-card-artist">Clara Dubois</p>
+          <p class="art-card-meta">Oil on Panel • 2019</p>
+        </div>
+      </div>
+      <div class="art-card" data-category="sculpture" data-title="Fragmented Thoughts" data-artist="Arthur Pendelton" data-meta="Bronze & Stone • 2023">
+        <img src="images/fragmented_sculpture.png" alt="Fragmented Thoughts" class="art-card-img" loading="lazy">
+        <div class="art-card-info">
+          <h3 class="art-card-title">Fragmented Thoughts</h3>
+          <p class="art-card-artist">Arthur Pendelton</p>
+          <p class="art-card-meta">Bronze & Stone • 2023</p>
+        </div>
+      </div>
+      <div class="art-card" data-category="digital" data-title="Neon Geometry" data-artist="Sarah Chen" data-meta="Digital Synthesis • 2025">
+        <img src="images/neon_geometry.png" alt="Neon Geometry" class="art-card-img" loading="lazy">
+        <div class="art-card-info">
+          <h3 class="art-card-title">Neon Geometry</h3>
+          <p class="art-card-artist">Sarah Chen</p>
+          <p class="art-card-meta">Digital Synthesis • 2025</p>
+        </div>
+      </div>
+      <div class="art-card" data-category="painting" data-title="Golden Fragments" data-artist="Mikhail Petrov" data-meta="Mixed Media • 2024">
+        <img src="images/golden_fragments.png" alt="Golden Fragments" class="art-card-img" loading="lazy">
+        <div class="art-card-info">
+          <h3 class="art-card-title">Golden Fragments</h3>
+          <p class="art-card-artist">Mikhail Petrov</p>
+          <p class="art-card-meta">Mixed Media • 2024</p>
+        </div>
+      </div>
+      <div class="art-card" data-category="painting" data-title="The Noble Gaze" data-artist="Isabella Romano" data-meta="Oil on Canvas • 2020">
+        <img src="images/portrait.png" alt="The Noble Gaze" class="art-card-img" loading="lazy">
+        <div class="art-card-info">
+          <h3 class="art-card-title">The Noble Gaze</h3>
+          <p class="art-card-artist">Isabella Romano</p>
+          <p class="art-card-meta">Oil on Canvas • 2020</p>
+        </div>
+      </div>
+      <div class="art-card" data-category="digital" data-title="Ethereal Waves" data-artist="James Thorne" data-meta="Generative Art • 2026">
+        <img src="images/ethereal_waves.png" alt="Ethereal Waves" class="art-card-img" loading="lazy">
+        <div class="art-card-info">
+          <h3 class="art-card-title">Ethereal Waves</h3>
+          <p class="art-card-artist">James Thorne</p>
+          <p class="art-card-meta">Generative Art • 2026</p>
+        </div>
+      </div>
+      <div class="art-card" data-category="sculpture" data-title="Silent Monolith" data-artist="Diego Silva" data-meta="Granite • 2022">
+        <img src="images/sculpture.png" alt="Silent Monolith" class="art-card-img" loading="lazy">
+        <div class="art-card-info">
+          <h3 class="art-card-title">Silent Monolith</h3>
+          <p class="art-card-artist">Diego Silva</p>
+          <p class="art-card-meta">Granite • 2022</p>
+        </div>
+      </div>
+      <div class="art-card" data-category="digital" data-title="Liquid Prism" data-artist="Sarah Chen" data-meta="Digital Installation • 2025">
+        <img src="images/landscape.png" alt="Liquid Prism" class="art-card-img" loading="lazy">
+        <div class="art-card-info">
+          <h3 class="art-card-title">Liquid Prism</h3>
+          <p class="art-card-artist">Sarah Chen</p>
+          <p class="art-card-meta">Digital Installation • 2025</p>
+        </div>
+      </div>
+      <div class="art-card" data-category="photography" data-title="Urban Shadows" data-artist="Leo Vance" data-meta="Silver Gelatin Print • 2021">
+        <img src="images/abstract.png" alt="Urban Shadows" class="art-card-img" loading="lazy">
+        <div class="art-card-info">
+          <h3 class="art-card-title">Urban Shadows</h3>
+          <p class="art-card-artist">Leo Vance</p>
+          <p class="art-card-meta">Silver Gelatin Print • 2021</p>
+        </div>
+      </div>
+      <!-- 15 More Artworks -->
+      <div class="art-card" data-category="painting" data-title="Crimson Strokes" data-artist="Elena Vasquez" data-meta="Oil on Canvas • 2022">
+        <img src="images/hero.png" alt="Crimson Strokes" class="art-card-img" loading="lazy">
+        <div class="art-card-info">
+          <h3 class="art-card-title">Crimson Strokes</h3>
+          <p class="art-card-artist">Elena Vasquez</p>
+          <p class="art-card-meta">Oil on Canvas • 2022</p>
+        </div>
+      </div>
+      <div class="art-card" data-category="painting" data-title="Lost in Blue" data-artist="Mikhail Petrov" data-meta="Acrylic • 2021">
+        <img src="images/symphony_blue.png" alt="Lost in Blue" class="art-card-img" loading="lazy">
+        <div class="art-card-info">
+          <h3 class="art-card-title">Lost in Blue</h3>
+          <p class="art-card-artist">Mikhail Petrov</p>
+          <p class="art-card-meta">Acrylic • 2021</p>
+        </div>
+      </div>
+      <div class="art-card" data-category="photography" data-title="Desert Mirage" data-artist="Leo Vance" data-meta="Fine Art Print • 2023">
+        <img src="images/renaissance_echo.png" alt="Desert Mirage" class="art-card-img" loading="lazy">
+        <div class="art-card-info">
+          <h3 class="art-card-title">Desert Mirage</h3>
+          <p class="art-card-artist">Leo Vance</p>
+          <p class="art-card-meta">Fine Art Print • 2023</p>
+        </div>
+      </div>
+      <div class="art-card" data-category="sculpture" data-title="Bronze Echo" data-artist="Sophie Laurent" data-meta="Bronze • 2020">
+        <img src="images/fragmented_sculpture.png" alt="Bronze Echo" class="art-card-img" loading="lazy">
+        <div class="art-card-info">
+          <h3 class="art-card-title">Bronze Echo</h3>
+          <p class="art-card-artist">Sophie Laurent</p>
+          <p class="art-card-meta">Bronze • 2020</p>
+        </div>
+      </div>
+      <div class="art-card" data-category="digital" data-title="Cyber Genesis" data-artist="Sarah Chen" data-meta="Digital • 2025">
+        <img src="images/neon_geometry.png" alt="Cyber Genesis" class="art-card-img" loading="lazy">
+        <div class="art-card-info">
+          <h3 class="art-card-title">Cyber Genesis</h3>
+          <p class="art-card-artist">Sarah Chen</p>
+          <p class="art-card-meta">Digital • 2025</p>
+        </div>
+      </div>
+      <div class="art-card" data-category="painting" data-title="Golden Field" data-artist="Aiko Tanaka" data-meta="Oil on Linen • 2019">
+        <img src="images/golden_fragments.png" alt="Golden Field" class="art-card-img" loading="lazy">
+        <div class="art-card-info">
+          <h3 class="art-card-title">Golden Field</h3>
+          <p class="art-card-artist">Aiko Tanaka</p>
+          <p class="art-card-meta">Oil on Linen • 2019</p>
+        </div>
+      </div>
+      <div class="art-card" data-category="photography" data-title="Midnight City" data-artist="James Thorne" data-meta="Print • 2024">
+        <img src="images/portrait.png" alt="Midnight City" class="art-card-img" loading="lazy">
+        <div class="art-card-info">
+          <h3 class="art-card-title">Midnight City</h3>
+          <p class="art-card-artist">James Thorne</p>
+          <p class="art-card-meta">Print • 2024</p>
+        </div>
+      </div>
+      <div class="art-card" data-category="sculpture" data-title="Marble Veil" data-artist="Sophie Laurent" data-meta="Marble • 2021">
+        <img src="images/ethereal_waves.png" alt="Marble Veil" class="art-card-img" loading="lazy">
+        <div class="art-card-info">
+          <h3 class="art-card-title">Marble Veil</h3>
+          <p class="art-card-artist">Sophie Laurent</p>
+          <p class="art-card-meta">Marble • 2021</p>
+        </div>
+      </div>
+      <div class="art-card" data-category="painting" data-title="Abstract Waves" data-artist="Mikhail Petrov" data-meta="Mixed Media • 2023">
+        <img src="images/sculpture.png" alt="Abstract Waves" class="art-card-img" loading="lazy">
+        <div class="art-card-info">
+          <h3 class="art-card-title">Abstract Waves</h3>
+          <p class="art-card-artist">Mikhail Petrov</p>
+          <p class="art-card-meta">Mixed Media • 2023</p>
+        </div>
+      </div>
+      <div class="art-card" data-category="digital" data-title="Neon Nights" data-artist="Sarah Chen" data-meta="Digital Art • 2026">
+        <img src="images/landscape.png" alt="Neon Nights" class="art-card-img" loading="lazy">
+        <div class="art-card-info">
+          <h3 class="art-card-title">Neon Nights</h3>
+          <p class="art-card-artist">Sarah Chen</p>
+          <p class="art-card-meta">Digital Art • 2026</p>
+        </div>
+      </div>
+      <div class="art-card" data-category="painting" data-title="Forest Whispers" data-artist="Aiko Tanaka" data-meta="Oil on Canvas • 2020">
+        <img src="images/abstract.png" alt="Forest Whispers" class="art-card-img" loading="lazy">
+        <div class="art-card-info">
+          <h3 class="art-card-title">Forest Whispers</h3>
+          <p class="art-card-artist">Aiko Tanaka</p>
+          <p class="art-card-meta">Oil on Canvas • 2020</p>
+        </div>
+      </div>
+      <div class="art-card" data-category="photography" data-title="Ocean Depth" data-artist="Leo Vance" data-meta="Print • 2022">
+        <img src="images/hero.png" alt="Ocean Depth" class="art-card-img" loading="lazy">
+        <div class="art-card-info">
+          <h3 class="art-card-title">Ocean Depth</h3>
+          <p class="art-card-artist">Leo Vance</p>
+          <p class="art-card-meta">Print • 2022</p>
+        </div>
+      </div>
+      <div class="art-card" data-category="painting" data-title="Sunlit Room" data-artist="Clara Dubois" data-meta="Oil on Panel • 2018">
+        <img src="images/symphony_blue.png" alt="Sunlit Room" class="art-card-img" loading="lazy">
+        <div class="art-card-info">
+          <h3 class="art-card-title">Sunlit Room</h3>
+          <p class="art-card-artist">Clara Dubois</p>
+          <p class="art-card-meta">Oil on Panel • 2018</p>
+        </div>
+      </div>
+      <div class="art-card" data-category="sculpture" data-title="Modern Form" data-artist="Diego Silva" data-meta="Steel • 2024">
+        <img src="images/renaissance_echo.png" alt="Modern Form" class="art-card-img" loading="lazy">
+        <div class="art-card-info">
+          <h3 class="art-card-title">Modern Form</h3>
+          <p class="art-card-artist">Diego Silva</p>
+          <p class="art-card-meta">Steel • 2024</p>
+        </div>
+      </div>
+      <div class="art-card" data-category="digital" data-title="Fractal Dream" data-artist="James Thorne" data-meta="Generative • 2025">
+        <img src="images/fragmented_sculpture.png" alt="Fractal Dream" class="art-card-img" loading="lazy">
+        <div class="art-card-info">
+          <h3 class="art-card-title">Fractal Dream</h3>
+          <p class="art-card-artist">James Thorne</p>
+          <p class="art-card-meta">Generative • 2025</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <div class="stats-section reveal">
+    <div class="stat-item">
+      <div class="stat-number" data-target="2500">0</div>
+      <div class="stat-label">Artworks</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number" data-target="180">0</div>
+      <div class="stat-label">Artists</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number" data-target="45">0</div>
+      <div class="stat-label">Exhibitions</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number" data-target="127">0</div>
+      <div class="stat-label">Years of Legacy</div>
+    </div>
+  </div>
+
+  <!-- Artists Section -->
+  <section class="section" id="artists">
+    <div class="reveal">
+      <p class="section-label">The Visionaries</p>
+      <h2 class="section-title">Featured Artists</h2>
+      <p class="section-desc">Meet the creative minds whose extraordinary vision and masterful technique define the Lumière collection.</p>
+    </div>
+    <div class="artists-grid reveal">
+      <div class="artist-card">
+        <img src="images/portrait.png" alt="Elena Vasquez" class="artist-avatar">
+        <h3 class="artist-name">Elena Vasquez</h3>
+        <p class="artist-specialty">Oil Painting</p>
+        <p class="artist-bio">A Madrid-born visionary who transforms raw emotion into sweeping canvases that explore the boundary between reality and dream.</p>
+      </div>
+      <div class="artist-card">
+        <img src="images/abstract.png" alt="Mikhail Petrov" class="artist-avatar">
+        <h3 class="artist-name">Mikhail Petrov</h3>
+        <p class="artist-specialty">Abstract Expressionism</p>
+        <p class="artist-bio">Drawing from Moscow's avant-garde tradition, Petrov creates explosive compositions that challenge perception and invite introspection.</p>
+      </div>
+      <div class="artist-card">
+        <img src="images/landscape.png" alt="Aiko Tanaka" class="artist-avatar">
+        <h3 class="artist-name">Aiko Tanaka</h3>
+        <p class="artist-specialty">Impressionist Landscapes</p>
+        <p class="artist-bio">Tanaka's ethereal landscapes capture the fleeting beauty of nature, blending Eastern philosophy with Western impressionist technique.</p>
+      </div>
+      <div class="artist-card">
+        <img src="images/sculpture.png" alt="Sophie Laurent" class="artist-avatar">
+        <h3 class="artist-name">Sophie Laurent</h3>
+        <p class="artist-specialty">Marble Sculpture</p>
+        <p class="artist-bio">A Parisian sculptor whose works in Carrara marble reveal the hidden poetry of the human form, frozen in moments of exquisite grace.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Exhibitions Section -->
+  <section class="section" id="exhibitions" style="background: var(--bg-card);">
+    <div class="reveal">
+      <p class="section-label">Now Showing</p>
+      <h2 class="section-title">Current Exhibitions</h2>
+      <p class="section-desc">Immerse yourself in our curated exhibitions, each one a journey through artistic brilliance and cultural narrative.</p>
+    </div>
+    <div class="exhibitions-grid reveal">
+      <div class="exhibition-card">
+        <img src="images/abstract.png" alt="Echoes of Color" class="exhibition-img">
+        <div class="exhibition-info">
+          <p class="exhibition-date">Apr 15 — Jul 30, 2026</p>
+          <h3 class="exhibition-title">Echoes of Color</h3>
+          <p class="exhibition-desc">A vibrant exploration of abstract expressionism featuring 40 works that trace the movement's evolution from post-war New York to contemporary global voices.</p>
+          <a href="#exhibitions" class="exhibition-btn">View Exhibition</a>
+        </div>
+      </div>
+      <div class="exhibition-card">
+        <img src="images/sculpture.png" alt="Forms in Silence" class="exhibition-img">
+        <div class="exhibition-info">
+          <p class="exhibition-date">Mar 01 — Jun 15, 2026</p>
+          <h3 class="exhibition-title">Forms in Silence</h3>
+          <p class="exhibition-desc">An intimate showcase of contemporary sculpture exploring the dialogue between material and meaning, featuring artists from twelve countries.</p>
+          <a href="#exhibitions" class="exhibition-btn">View Exhibition</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VR Gallery Section -->
+  <section class="section vr-section" id="vr-gallery">
+    <div class="vr-bg parallax-bg"></div>
+    <div class="vr-overlay"></div>
+    <div class="vr-content reveal">
+      <p class="section-label">Immerse Yourself</p>
+      <h2 class="section-title">The VR Gallery</h2>
+      <p class="section-desc" style="color: var(--text-secondary); max-width: 500px; margin: 0 auto 3rem auto;">
+        Step into our digital twin. Explore curated exhibitions from anywhere in the world. Get closer to the brushstrokes than ever before in our immersive virtual reality space.
+      </p>
+      <div class="vr-viewer-mockup">
+        <div class="vr-viewer-inner">
+          <i class="fas fa-play vr-play-icon"></i>
+          <p class="vr-viewer-text">Launch Experience</p>
+        </div>
+      </div>
+      <a href="#vr-gallery" class="hero-cta vr-btn" style="margin-top: 3rem;">Start Virtual Tour</a>
+    </div>
+  </section>
+
+  <!-- Advisory Section -->
+  <section class="section advisory-section" id="advisory">
+    <div class="advisory-grid">
+      <div class="advisory-image-col reveal">
+        <div class="advisory-image-wrapper">
+          <img src="images/portrait.png" alt="Art Curator" class="advisory-img">
+          <div class="advisory-badge">
+            <span>Est. 1897</span>
+          </div>
+        </div>
+      </div>
+      <div class="advisory-content-col reveal" style="transition-delay: 0.2s;">
+        <p class="section-label">Private Sales</p>
+        <h2 class="section-title">Art Advisory</h2>
+        <p class="advisory-text">
+          Building a meaningful art collection requires more than just capital; it demands vision, access, and deep market knowledge. Our senior partners provide discreet, conflict-free advice to private collectors, museums, and corporate clients globally.
+        </p>
+        <ul class="advisory-services">
+          <li><i class="fas fa-check"></i> <span>Collection Strategy & Development</span></li>
+          <li><i class="fas fa-check"></i> <span>Market Intelligence & Valuation</span></li>
+          <li><i class="fas fa-check"></i> <span>Logistics, Conservation & Framing</span></li>
+          <li><i class="fas fa-check"></i> <span>Private Treaty Sales</span></li>
+        </ul>
+        <a href="#contact" class="form-submit" style="display: inline-block; margin-top: 2rem;">Inquire Privately</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Journal Section -->
+  <section class="section" id="journal" style="background: var(--bg-card);">
+    <div class="reveal">
+      <p class="section-label">Curator's Notes</p>
+      <h2 class="section-title">The Journal</h2>
+      <p class="section-desc">Insights, essays, and stories from the art world, written by our curators and guest scholars.</p>
+    </div>
+    <div class="journal-grid reveal">
+      <article class="journal-card">
+        <div class="journal-img-wrapper">
+          <img src="images/abstract.png" alt="Journal Post 1" class="journal-img">
+        </div>
+        <div class="journal-content">
+          <span class="journal-date">April 12, 2026</span>
+          <h3 class="journal-title">The Resurgence of Chiaroscuro in Modern Art</h3>
+          <p class="journal-excerpt">Exploring how contemporary painters are rediscovering the dramatic lighting techniques of the Old Masters to address modern themes of isolation.</p>
+          <a href="#journal" class="journal-link">Read Full Essay <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </article>
+      <article class="journal-card">
+        <div class="journal-img-wrapper">
+          <img src="images/sculpture.png" alt="Journal Post 2" class="journal-img">
+        </div>
+        <div class="journal-content">
+          <span class="journal-date">March 28, 2026</span>
+          <h3 class="journal-title">Silence in Stone: The Evolution of Form</h3>
+          <p class="journal-excerpt">A conversation with Sophie Laurent ahead of her upcoming retrospective, discussing the dialogue between material resistance and creative intent.</p>
+          <a href="#journal" class="journal-link">Read Full Essay <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </article>
+      <article class="journal-card">
+        <div class="journal-img-wrapper">
+          <img src="images/landscape.png" alt="Journal Post 3" class="journal-img">
+        </div>
+        <div class="journal-content">
+          <span class="journal-date">March 15, 2026</span>
+          <h3 class="journal-title">Collecting the Intangible: Digital Horizons</h3>
+          <p class="journal-excerpt">As the definition of original artwork expands, we examine the shifting paradigms of provenance and ownership in the age of algorithmic creation.</p>
+          <a href="#journal" class="journal-link">Read Full Essay <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section" id="about">
+    <div class="reveal" style="max-width: 800px; margin: 0 auto; text-align: center;">
+      <p class="section-label" style="text-align:center;">Our Story</p>
+      <h2 class="section-title" style="text-align:center;">About Lumière</h2>
+      <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.9; margin-top: 2rem; font-family: 'Playfair Display', serif; font-style: italic;">
+        Founded in 1897, Lumière has been a beacon of artistic excellence for over a century. Nestled in the heart of Paris, our gallery has witnessed the rise of Impressionism, the bold strokes of Expressionism, and the digital revolution of contemporary art. We believe that art is not merely seen — it is felt, experienced, and lived. Every piece in our collection has been chosen not for its market value, but for its ability to move the human spirit.
+      </p>
+      <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.8; margin-top: 2rem;">
+        Today, Lumière continues its mission to bridge the timeless and the contemporary, hosting over 45 exhibitions annually and nurturing emerging talent alongside established masters. Our doors remain open to all who seek beauty, meaning, and connection through the universal language of art.
+      </p>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <div class="newsletter reveal">
+    <p class="section-label">Stay Inspired</p>
+    <h2 class="section-title">Join Our Circle</h2>
+    <p style="color: var(--text-muted); font-size: 0.9rem; max-width: 450px; margin: 0 auto;">Receive exclusive invitations to private viewings, exhibition previews, and artist conversations.</p>
+    <form class="newsletter-form" id="newsletterForm">
+      <input type="email" class="newsletter-input" placeholder="Your email address" required>
+      <button type="submit" class="newsletter-btn">Subscribe</button>
+    </form>
+  </div>
+
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <div class="reveal">
+      <p class="section-label">Get in Touch</p>
+      <h2 class="section-title">Visit Us</h2>
+      <p class="section-desc">We welcome all art lovers to experience our collection in person. Step into the world of Lumière.</p>
+    </div>
+    <div class="contact-grid reveal">
+      <ul class="contact-info-list">
+        <li class="contact-info-item">
+          <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div>
+            <p class="contact-info-title">Location</p>
+            <p class="contact-info-text">Faisalabad</p>
+          </div>
+        </li>
+        <li class="contact-info-item">
+          <div class="contact-icon"><i class="fas fa-phone"></i></div>
+          <div>
+            <p class="contact-info-title">Phone</p>
+            <p class="contact-info-text">923001212121</p>
+          </div>
+        </li>
+        <li class="contact-info-item">
+          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <p class="contact-info-title">Email</p>
+            <p class="contact-info-text">muhammadrayyankhalid5@gmail.com</p>
+          </div>
+        </li>
+        <li class="contact-info-item">
+          <div class="contact-icon"><i class="fas fa-clock"></i></div>
+          <div>
+            <p class="contact-info-title">Opening Hours</p>
+            <p class="contact-info-text">Tue — Sun: 10:00 AM — 7:00 PM<br>Monday: Closed</p>
+          </div>
+        </li>
+      </ul>
+      <form class="contact-form" id="contactForm">
+        <div class="form-group"><input type="text" class="form-input" placeholder="Your Name" required></div>
+        <div class="form-group"><input type="email" class="form-input" placeholder="Your Email" required></div>
+        <div class="form-group"><input type="text" class="form-input" placeholder="Subject"></div>
+        <div class="form-group"><textarea class="form-textarea" placeholder="Your Message" required></textarea></div>
+        <button type="submit" class="form-submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">LUMIÈRE</div>
+        <p class="footer-tagline">Where Art Meets Eternity</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <p class="footer-col-title">Explore</p>
+          <ul>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#artists">Artists</a></li>
+            <li><a href="#exhibitions">Exhibitions</a></li>
+            <li><a href="#vr-gallery">Virtual Tours</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Information</p>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#about">Careers</a></li>
+            <li><a href="#journal">Press</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Legal</p>
+          <ul>
+            <li><a href="#about">Privacy Policy</a></li>
+            <li><a href="#about">Terms of Use</a></li>
+            <li><a href="#about">Accessibility</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2026 Lumière Art Gallery. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://pinterest.com" target="_blank" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">&times;</button>
+    <img src="" alt="" class="lightbox-img" id="lightboxImg">
+    <div class="lightbox-info">
+      <h3 class="lightbox-title" id="lightboxTitle"></h3>
+      <p class="lightbox-artist" id="lightboxArtist"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
